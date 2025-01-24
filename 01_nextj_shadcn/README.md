@@ -29,11 +29,12 @@ npm run dev
 
 ## About
 
-Created by [Emmanuel Bernard](https://www.youtube.com/@emmanuel.d.bernard). This starter kit is designed to help you kickstart your next web project with best practices and modern tooling.
+Created by [Emmanuel Bernard](https://www.linkedin.com/in/emmbernard/). This starter kit is designed to help you kickstart your next web project with best practices and modern tooling.
 
 ## Learn More
 
 - 📺 [Follow my YouTube channel](https://www.youtube.com/@emmanuel.d.bernard)
+- 💼 [Connect on LinkedIn](https://www.linkedin.com/in/emmbernard/)
 - 🌟 [Star this repository](https://github.com/n8n-ninja/starterkits)
 
 ## License
