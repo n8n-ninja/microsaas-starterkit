@@ -2,7 +2,10 @@
 
 ## Project description
 
-This project is a starter kit designed to use
+The project is a page about the future of coding with AI.
+
+Based on those instructions, we will create a modular page.
+We will create elegant components (located in /components/) that are reusable. The props are clearely documented.
 
 ## Technical stack
 
