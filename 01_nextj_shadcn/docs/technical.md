@@ -1,20 +1,26 @@
+# Technical documentation
+
 This comprehensive guide outlines best practices, conventions, and standards for development with modern web technologies including ReactJS, NextJS, Redux, TypeScript, JavaScript, HTML, CSS, and UI frameworks.
 
-    Development Philosophy
+## Development Philosophy
+
     - Write clean, maintainable, and scalable code
     - Follow SOLID principles
     - Prefer functional and declarative programming patterns over imperative
     - Emphasize type safety and static analysis
     - Practice component-driven development
 
-    Code Implementation Guidelines
-    Planning Phase
+## Code Implementation Guidelines
+
+### Planning Phase
+
     - Begin with step-by-step planning
     - Write detailed pseudocode before implementation
     - Document component architecture and data flow
     - Consider edge cases and error scenarios
 
-    Code Style
+### Code Style
+
     - Use tabs for indentation
     - Use single quotes for strings (except to avoid escaping)
     - Omit semicolons (unless required for disambiguation)
@@ -30,7 +36,8 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Limit line length to 80 characters
     - Use trailing commas in multiline object/array literals
 
-    Naming Conventions
+### Naming Conventions
+
     General Rules
     - Use PascalCase for:
       - Components
@@ -51,7 +58,8 @@ This comprehensive guide outlines best practices, conventions, and standards for
       - Constants
       - Global configurations
 
-    Specific Naming Patterns
+### Specific Naming Patterns
+
     - Prefix event handlers with 'handle': handleClick, handleSubmit
     - Prefix boolean variables with verbs: isLoading, hasError, canSubmit
     - Prefix custom hooks with 'use': useAuth, useForm
@@ -62,8 +70,10 @@ This comprehensive guide outlines best practices, conventions, and standards for
       - props (properties)
       - ref (reference)
 
-    React Best Practices
-    Component Architecture
+### React Best Practices
+
+#### Component Architecture
+
     - Use functional components with TypeScript interfaces
     - Define components using the function keyword
     - Extract reusable logic into custom hooks
@@ -71,21 +81,25 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Use React.memo() strategically for performance
     - Implement proper cleanup in useEffect hooks
 
-    React Performance Optimization
+#### React Performance Optimization
+
     - Use useCallback for memoizing callback functions
     - Implement useMemo for expensive computations
     - Avoid inline function definitions in JSX
     - Implement code splitting using dynamic imports
     - Implement proper key props in lists (avoid using index as key)
 
-    Next.js Best Practices
-    Core Concepts
+### Next.js Best Practices
+
+#### Core Concepts
+
     - Utilize App Router for routing
     - Implement proper metadata management
     - Use proper caching strategies
     - Implement proper error boundaries
 
-    Components and Features
+#### Components and Features
+
     - Use Next.js built-in components:
       - Image component for optimized images
       - Link component for client-side navigation
@@ -94,7 +108,8 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Implement proper loading states
     - Use proper data fetching methods
 
-    Server Components
+#### Server Components
+
     - Default to Server Components
     - Use URL query parameters for data fetching and server state management
     - Use 'use client' directive only when necessary:
@@ -103,7 +118,8 @@ This comprehensive guide outlines best practices, conventions, and standards for
       - State management
       - Client-side-only libraries
 
-    TypeScript Implementation
+### TypeScript Implementation
+
     - Enable strict mode
     - Define clear interfaces for component props, state, and Redux state structure.
     - Use type guards to handle potential undefined or null values safely.
@@ -112,13 +128,16 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Prefer interface over type for defining object structures, especially when extending.
     - Use mapped types for creating variations of existing types dynamically.
 
-    UI and Styling
-    Component Libraries
+## UI and Styling
+
+### Component Libraries
+
     - Use Shadcn UI for consistent, accessible component design.
     - Integrate Radix UI primitives for customizable, accessible UI elements.
     - Apply composition patterns to create modular, reusable components.
 
-    Styling Guidelines
+### Styling Guidelines
+
     - Use Tailwind CSS for styling
     - Use Tailwind CSS for utility-first, maintainable styling.
     - Design with mobile-first, responsive principles for flexibility across devices.
@@ -127,14 +146,17 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Maintain consistent spacing values to establish visual harmony.
     - Define CSS variables for theme colors and spacing to support easy theming and maintainability.
 
-    State Management
-    Local State
+## State Management
+
+### Local State
+
     - Use useState for component-level state
     - Implement useReducer for complex state
     - Use useContext for shared state
     - Implement proper state initialization
 
-    Global State
+### Global State
+
     - Use Redux Toolkit for global state
     - Use createSlice to define state, reducers, and actions together.
     - Avoid using createReducer and createAction unless necessary.
@@ -142,33 +164,40 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Use selectors to encapsulate state access.
     - Avoid large, all-encompassing slices; separate concerns by feature.
 
+## Error Handling and Validation
 
-    Error Handling and Validation
-    Form Validation
+### Form Validation
+
     - Use Zod for schema validation
     - Implement proper error messages
     - Use proper form libraries (e.g., React Hook Form)
 
-    Error Boundaries
+### Error Boundaries
+
     - Use error boundaries to catch and handle errors in React component trees gracefully.
     - Log caught errors to an external service (e.g., Sentry) for tracking and debugging.
     - Design user-friendly fallback UIs to display when errors occur, keeping users informed without breaking the app.
 
-    Testing
-    Unit Testing
+## Testing
+
+### Unit Testing
+
     - Write thorough unit tests to validate individual functions and components.
     - Use Jest and React Testing Library for reliable and efficient testing of React components.
     - Follow patterns like Arrange-Act-Assert to ensure clarity and consistency in tests.
     - Mock external dependencies and API calls to isolate unit tests.
 
-    Integration Testing
+### Integration Testing
+
     - Focus on user workflows to ensure app functionality.
     - Set up and tear down test environments properly to maintain test independence.
     - Use snapshot testing selectively to catch unintended UI changes without over-relying on it.
     - Leverage testing utilities (e.g., screen in RTL) for cleaner and more readable tests.
 
-    Accessibility (a11y)
-    Core Requirements
+## Accessibility (a11y)
+
+### Core Requirements
+
     - Use semantic HTML for meaningful structure.
     - Apply accurate ARIA attributes where needed.
     - Ensure full keyboard navigation support.
@@ -178,19 +207,22 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Make all interactive elements accessible.
     - Provide clear and accessible error feedback.
 
-    Security
+## Security
+
     - Implement input sanitization to prevent XSS attacks.
     - Use DOMPurify for sanitizing HTML content.
     - Use proper authentication methods.
 
-    Internationalization (i18n)
+## Internationalization (i18n)
+
     - Use next-i18next for translations
     - Implement proper locale detection
     - Use proper number and date formatting
     - Implement proper RTL support
     - Use proper currency formatting
 
-    Documentation
+## Documentation
+
     - Use JSDoc for documentation
     - Document all public functions, classes, methods, and interfaces
     - Add examples when appropriate
@@ -201,7 +233,3 @@ This comprehensive guide outlines best practices, conventions, and standards for
     - Use proper links
     - Use proper headings
     - Use proper lists
-
-IMPORTANT NOTES
-
-- The correct command to use shadcn is `shadcn@latest` NOT `shadcn-ui@latest`. Make sure to use the good one everytime.

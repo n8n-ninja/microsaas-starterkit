@@ -1,0 +1,16 @@
+graph TD
+A[API Gateway] --> B[Auth Module]
+A --> C[User Module]
+A --> D[Product Module]
+CopyB --> E[(Auth DB)]
+C --> F[(User DB)]
+D --> G[(Product DB)]
+
+H[Event Bus] --> B
+H --> C
+H --> D
+
+style A fill:#f9f,stroke:#333,stroke-width:4px
+style B fill:#bbf,stroke:#333,stroke-width:2px
+style C fill:#bbf,stroke:#333,stroke-width:2px
+style D fill:#bbf,stroke:#333,stroke-width:2px
