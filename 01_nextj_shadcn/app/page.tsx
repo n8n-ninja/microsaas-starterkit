@@ -15,7 +15,7 @@ export default function Home() {
       />
 
       <div className="space-y-4">
-        <div className="flex items-center justify-center space-x-2">
+        <div className="flex items-center justify-center space-x-4">
           <Link
             href="https://www.youtube.com/@emmanuel.d.bernard"
             target="_blank"
