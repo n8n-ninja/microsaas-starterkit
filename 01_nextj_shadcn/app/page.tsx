@@ -13,6 +13,7 @@ export default function Home() {
           cta: "View on GitHub",
         }}
       />
+
       <div className="space-y-4">
         <div className="flex items-center justify-center space-x-2">
           <Link
