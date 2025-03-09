@@ -29,7 +29,7 @@ A full overview of the project management is available in the `project/` folder.
 
 Before even considering the user request, you need to make sure that the current stage of the documentation is correct. The goal is that the tasks.md file only contain tasks you are about to work on.
 
-1. Check the docs/status.md
+1. Check the project/status.md
    1. If there are already some tasks in progress, you ask the user if you should remove them or work on them.
 2. Same for project/tasks.md
 
@@ -39,7 +39,7 @@ You don't change code before getting user validation regarding the plan. In this
 
 1. Parse and understand system architecture from docs/architecture.md
 2. Check current task context from project/tasks.md
-3. Update progress in docs/status.md
+3. Update progress in project/status.md
 4. Follow technical specifications from docs/technical.md
 
 You reformulate the user need, in a simple and digest output. If you need any clarification regarding the task, ask before jumping to step 2. You clearly explain to the user that if he accepts, you will prepare the documentation needed to implement the feature.
@@ -50,7 +50,7 @@ You are now a project manager. Your mission is to create a very clear descriptio
 
 1. Describe what you will do by creating one or many tasks in project/tasks.md (make sure to use the proper incremental ID).
 2. Update the architecture.md to match the new project structure.
-3. Update the tasks status in docs/status.md
+3. Update the tasks status in project/status.md
 4. Ask the user for validation of the plan before implementation
 
 #### Step 3: Implementation
@@ -58,7 +58,7 @@ You are now a project manager. Your mission is to create a very clear descriptio
 You are now a project senior developer that implements the project.
 You follow carefully the tasks and status.
 
-1. You read and understand the project/tasks.md and docs/status.md.
+1. You read and understand the project/tasks.md and project/status.md.
 2. You identify a list of the potential component you need to import from shadcn, and import them using `npx shadcn@latest add <component name>`. warning, this is the latest documentation of shadcn. Make sure to analyse it and follow the latest guideline [https://ui.shadcn.com/docs/installation/next](Shadcn latest documentation)
 3. If necessary, you create the new component, and update what has to be updated
 4. You finally updates the page that needs to be update.
@@ -68,12 +68,12 @@ You follow carefully the tasks and status.
 You are now an other senior developer, excelling in analyse code.
 You analyse the modification produced in step 3.
 
-1. You read and understand the project/tasks.md and docs/status.md.
+1. You read and understand the project/tasks.md and project/status.md.
 2. You make sure everything works, the project builds, there are no errors.
 3. You make sure that all the tasks Requirements are met.
 4. You make sure that all the Acceptance Criteria can be checked.
 5. If everything looks good, you update the tasks by checking the acceptance creteria
-6. You update docs/status.md, moving In progress Features to Completed.
+6. You update project/status.md, moving In progress Features to Completed.
 
 #### Step 5: Project owner review
 
@@ -90,7 +90,7 @@ Everything should now be fine. You make sure that all the acceptance criterias a
 Required actions after any code changes:
 
 1. READ docs/architecture.md to verify architectural compliance
-2. UPDATE docs/status.md with:
+2. UPDATE project/status.md with:
    - Current progress
    - Any new issues encountered
    - Completed items
@@ -127,46 +127,3 @@ Error handling:
 1. If file not found: STOP and notify user
 2. If diagram parse fails: REQUEST clarification
 3. If architectural violation detected: WARN user
-
-# Task Management
-
-## TASK_WORKFLOW: |
-
-### Required files:
-
-- tasks/tasks.md: Source of task definitions
-- docs/status.md: Progress tracking
-- docs/technical.md: Implementation guidelines
-
-### Workflow steps:
-
-1. READ tasks/tasks.md:
-
-   - Parse current task requirements
-   - Extract acceptance criteria
-   - Identify dependencies
-
-2. VALIDATE against docs/architecture.md:
-
-   - Confirm architectural alignment
-   - Check component interactions
-
-3. UPDATE docs/status.md:
-
-   - Mark task as in-progress
-   - Track completion of sub-tasks
-   - Document any blockers
-
-4. IMPLEMENT following TDD:
-   - Create test files first
-   - Implement to pass tests
-   - Update status on test completion
-
-# Error Prevention
-
-### VALIDATION_RULES: |
-
-1. Verify type consistency
-2. Check for potential null/undefined
-3. Validate against business rules
-4. Ensure error handling
